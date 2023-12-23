@@ -1,154 +1,205 @@
 <!DOCTYPE html>
 <html>
-<title>Tarakanova Research Group</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Cardo|KoHo|Montserrat|Nunito|Poppins" rel="stylesheet">
-<style>
-body,h1,h2,h3,h4,h5,h6,p,a {font-family: "Cardo", sans-serif}
-.w3-bar,h1,button {font-family: "Cardo", sans-serif}
-.fa-anchor,.fa-coffee {font-size:200px}
-</style>
+<head>
+    <title>Tarakanova Research Group</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cardo|KoHo|Montserrat|Nunito|Poppins" rel="stylesheet">
+    <style>
+        body, h1, h2, h3, h4, h5, h6, p, a {font-family: "Cardo", sans-serif}
+        .w3-bar, h1, button {font-family: "Cardo", sans-serif}
+        .fa-anchor, .fa-coffee {font-size:200px}
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        /* Style for dots */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Scale images while keeping aspect ratio */
+        .mySlides img {
+            width: 100%;  /* Scale width to container */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* New style for the sponsors section */
+        .sponsors-container {
+            text-align: center;
+            margin-top: 20px;
+            margin-left: auto; /* Center align */
+            margin-right: auto; /* Center align */
+            max-width: 1000px; /* Same as slideshow for alignment */
+        }
+
+        /* Style for sponsor logos */
+        .sponsor-logo img {
+            height: 180px; /* Adjust this value to your preference */
+            width: auto; /* This ensures the width adjusts to maintain the aspect ratio */
+            display: inline-block; /* Display logos in a row */
+            margin-right: 30px; /* Adjust spacing between logos */
+        }
+
+        /* Style for smaller sponsor logos */
+        .sponsor-logo img.small-logo {
+            height: 80px; /* Smaller height for specific logos */
+            width: auto; /* This ensures the width adjusts to maintain the aspect ratio */
+            display: inline-block; /* Display logos in a row */
+            margin-right: 30px; /* Adjust spacing between logos */
+        }
+
+        /* Style for individual sponsor rows */
+        .sponsor-row {
+            text-align: center;
+            margin-bottom: 10px; /* Space between rows */
+        }
+
+
+        /* Adjust the first grid to center align */
+        .w3-content {
+            text-align: center;
+            margin-left: auto; /* Center align */
+            margin-right: auto; /* Center align */
+            max-width: 1000px; /* Same as slideshow for alignment */
+        }
+    </style>
+</head>
 <body>
 
 <!-- Navbar -->
-<div id=nav class="w3-center">
-  <div class="w3-white w3-center w3-large">
-    <h1 class="w3-padding w3-text-blue"><font color="#0086b3">Tarakanova Research Group</font></h1>
-    <font size="5" color="#585858">
-    <a class="w3-bar-item w3-button w3-center w3-hide-medium w3-row-padding w3-hide-large w3-center w3-padding-large w3-hover-none w3-hover-text-blue w3-large w3-white" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-row-padding w3-padding-large w3-hover-text-blue w3-hide-small w3-hover-none"><font color="#0086b3">Home</font></a>
-    <a href="members.html" class="w3-bar-item w3-button w3-row-padding w3-hide-small w3-padding-large w3-hover-text-blue w3-hover-none">Members</a>
-    <a href="publications.html" class="w3-bar-item w3-button w3-padding-right w3-hide-small w3-padding-large w3-hover-text-blue w3-hover-none">Publications</a>
-    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-row-padding w3-padding-large w3-hover-text-blue w3-hover-none">Contact</a>
-    <a href="news.html" class="w3-bar-item w3-button w3-hide-small w3-row-padding w3-padding-large w3-hover-text-blue w3-hover-none">News</a>
-    <a href="positions.html" class="w3-bar-item w3-button w3-hide-small w3-row-padding w3-padding-large w3-hover-text-blue w3-hover-none">Positions</a>
-  </font></div>
+<div id="nav" class="w3-center">
+    <div class="w3-white w3-center w3-large">
+        <h1 class="w3-padding"><font color="#0086b3">Tarakanova Research Group</font></h1>
+        <font size="5" color="#585858">
+        <a class="w3-bar-item w3-button w3-center w3-hide-medium w3-hide-large w3-center w3-padding-large w3-hover-none w3-hover-text-blue w3-large w3-white" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="index.html" class="w3-bar-item w3-button w3-center w3-hide-small w3-padding-large w3-hover-text-blue w3-hover-none"><font color="#0086b3">Home</font></a>
+        <a href="members.html" class="w3-bar-item w3-button w3-center w3-hide-small w3-padding-large w3-hover-text-blue w3-hover-none">Members</a>
+        <a href="publications.html" class="w3-bar-item w3-button w3-center w3-hide-small w3-padding-large w3-hover-text-blue w3-hover-none">Publications</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-center w3-hide-small w3-padding-large w3-hover-text-blue w3-hover-none">Contact</a>
+        <a href="positions.html" class="w3-bar-item w3-button w3-center w3-hide-small w3-padding-large w3-hover-text-blue w3-hover-none">Positions</a>
+        </font>
+    </div>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="index.html" class="w3-bar-item w3-center w3-button w3-padding-large">Home</a>
-    <a href="publications.html" class="w3-bar-item w3-center w3-button w3-padding-large">Publications</a>
-    <a href="members.html" class="w3-bar-item w3-button w3-center w3-padding-large">Members</a>
-    <a href="contact.html" class="w3-bar-item w3-button w3-center w3-padding-large">Contact</a>
-    <a href="news.html" class="w3-bar-item w3-button w3-center w3-padding-large">News</a>
-    <a href="positions.html" class="w3-bar-item w3-button w3-center w3-padding-large">Positions</a>
-  </div>
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="index.html" class="w3-bar-item w3-center w3-button w3-padding-large">Home</a>
+        <a href="publications.html" class="w3-bar-item w3-center w3-button w3-padding-large">Publications</a>
+        <a href="members.html" class="w3-bar-item w3-button w3-center w3-padding-large">Members</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-center w3-padding-large">Contact</a>
+        <a href="positions.html" class="w3-bar-item w3-button w3-center w3-padding-large">Positions</a>
+    </div>
 </div>
 
-<!-- Header -->
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-</style>
-</head>
-</br>
-<body>
-
+<!-- Header with Slideshow -->
 <div class="slideshow-container">
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 1</div>
-  <img src="home.png" style="width:100%">
+    <div class="mySlides fade">
+        <img src="home.png" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+        <img src="home2.png" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+        <img src="home3.png" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+        <img src="home4.png" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+        <img src="home5.png" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+        <img src="home6.png" style="width:100%">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
+<br>
 
+<!-- The dots/circles -->
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
 </div>
 
 <script>
 var slideIndex = 1;
 showSlides(slideIndex);
 
+// Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
@@ -158,33 +209,48 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
 }
 </script>
 
-</body>
-
 <!-- First Grid -->
-  <div class="w3-content w3-center">
-        <p><font size="4" color="#696969">Our research focuses on advancing molecular and multiscale modeling methods to study the structure, function and mechanics of biological systems and biological and bioinspired materials. We develop computational methods for the design and characterization of novel functional materials from the nanoscale for medical and engineering applications, drawing inspiration from natural design principles. We also investigate new characterization approaches for highly disordered molecules and associated self-assembly principles, related functions and implications for health and disease. Our work aims to expose disease mechanisms from a fundamental scale into structural and functional hierarchies associated with complex biological systems. </font></p>
+<div class="w3-content w3-center">
+    <p><font size="4" color="#696969">Our group’s research focuses on advancing molecular, multiscale and data-driven modeling methods to study the structure, function and mechanics of complex nanoscale and biological materials. In particular, our work aims to characterize extracellular matrix proteins including elastin, collagen and fibrillin, and their role in the context of aging and human disease. We are also interested in developing computational methods for the multiscale design and characterization of novel functional materials from the nanoscale, for medical and engineering applications, drawing inspiration from natural design principles. We employ a computational materials science approach, seeking to expose disease mechanisms from a fundamental scale, and across structural and functional hierarchies associated with complex biological systems. To this end, we apply a particle dynamics-based multiscale approach that integrates the structure-function paradigm of materials science and provides a bottom-up description of materials starting with the architecture of molecular building blocks at the atomistic level up to the macroscale. Our research also broadly utilizes novel data-driven, high-throughput machine learning-based approaches for predictive design. These tools enable us to pose essential questions about the behavior of tissues such as arterial elastic tissue and bone, and to repurpose molecules for new functions like improved immunogenicity, thermal stability or resilience in aging. The long-term vision of our group is to develop new bioengineering frameworks to investigate and understand the etiology and treatment of disease, and to establish broadly applicable frameworks for predictive materials design.</font></p>
+
+</div>
+
+<!-- Sponsors Section -->
+<div class="sponsors-container">
+    <p><font size="4" color="#696969">Thank you to our sponsors:</font></p>
+    
+    <!-- First row of sponsors -->
+    <div class="sponsor-row">
+        <span class="sponsor-logo"><img src="uconn.png" alt="UConn"></span>
+        <span class="sponsor-logo"><img src="nsf.png" alt="NSF"></span>
+        <span class="sponsor-logo"><img src="nih.png" alt="NIH"></span>
     </div>
 
-<!-- Second Grid -->
+    <!-- Second row of sponsors -->
+    <div class="sponsor-row">
+        <span class="sponsor-logo"><img src="cariplo.png" alt="Cariplo"></span>
+        <span class="sponsor-logo"><img src="xsede.png" alt="XSEDE" class="small-logo"></span>
+        <span class="sponsor-logo"><img src="access.png" alt="Access" class="small-logo"></span>
+    </div>
+</div>
 
 
-<!-- Footer -->
 
 <script>
 // Used to toggle the menu on small screens when clicking on the menu button
@@ -199,15 +265,4 @@ function myFunction() {
 </script>
 
 </body>
-
 </html>
-<style>
-a {
-    display: block;
-    padding: 10px 30px;
-}
-@viewport {
-  width: device-width ;
-  zoom: 1.0 ;
-}
-</style>
